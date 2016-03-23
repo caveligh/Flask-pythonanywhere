@@ -23,17 +23,11 @@
         </nav>
 
         <div class="container">
-            <div class="row">
-                Primer Comentario.
-            </div>
-
-            <div class="row">
-                Segundo comentario.  No es mas interesante que el primero
-            </div>
-
-            <div class="row">
-                Este es el tercer comentario. Lo mismo que el anterior
-            </div>
+            {% for comment in comments %}
+                <div class="row">
+                    {{ comment }}
+                </div>
+            {% endfor %}
 
             <div class="row">
                 <form action="." method="POST">
